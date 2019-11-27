@@ -1,16 +1,16 @@
 # glasswing
 
 <!-- [![Npm Version](https://img.shields.io/npm/v/frameworks.svg)](https://www.npmjs.com/package/frameworks) -->
-[![HitCount](http://hits.dwyl.io/glasswingjs/glasswing.svg)](http://hits.dwyl.io/glasswingjs/glasswing)
-[![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/glasswingjs/glasswing/issues)
+[![HitCount](http://hits.dwyl.io/glasswingjs/common.svg)](http://hits.dwyl.io/glasswingjs/common)
+[![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/glasswingjs/common/issues)
 
-[![TravisCI](https://travis-ci.org/glasswingjs/glasswing.svg?branch=master)](https://travis-ci.org/glasswingjs/glasswing)
-<!-- [![CircleCI](https://circleci.com/gh/glasswingjs/glasswing.svg?style=shield)](https://circleci.com/gh/glasswingjs/glasswing) -->
+[![TravisCI](https://travis-ci.org/glasswingjs/common.svg?branch=master)](https://travis-ci.org/glasswingjs/common)
+<!-- [![CircleCI](https://circleci.com/gh/glasswingjs/common.svg?style=shield)](https://circleci.com/gh/glasswingjs/common) -->
 
-[![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=glasswingjs_glasswing&metric=alert_status)](https://sonarcloud.io/dashboard?id=glasswingjs_glasswing) 
- [![SonarCloud Coverage](https://sonarcloud.io/api/project_badges/measure?project=glasswingjs_glasswing&metric=coverage)](https://sonarcloud.io/component_measures/metric/coverage/list?id=glasswingjs_glasswing)
- [![SonarCloud Bugs](https://sonarcloud.io/api/project_badges/measure?project=glasswingjs_glasswing&metric=bugs)](https://sonarcloud.io/component_measures/metric/reliability_rating/list?id=glasswingjs_glasswing)
- [![SonarCloud Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=glasswingjs_glasswing&metric=vulnerabilities)](https://sonarcloud.io/component_measures/metric/security_rating/list?id=glasswingjs_glasswing)
+[![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=glasswingjs_common&metric=alert_status)](https://sonarcloud.io/dashboard?id=glasswingjs_common) 
+ [![SonarCloud Coverage](https://sonarcloud.io/api/project_badges/measure?project=glasswingjs_common&metric=coverage)](https://sonarcloud.io/component_measures/metric/coverage/list?id=glasswingjs_common)
+ [![SonarCloud Bugs](https://sonarcloud.io/api/project_badges/measure?project=glasswingjs_common&metric=bugs)](https://sonarcloud.io/component_measures/metric/reliability_rating/list?id=glasswingjs_common)
+ [![SonarCloud Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=glasswingjs_common&metric=vulnerabilities)](https://sonarcloud.io/component_measures/metric/security_rating/list?id=glasswingjs_common)
 
 <!--
 [![Donate to this project using Patreon](https://img.shields.io/badge/patreon-donate-yellow.svg)](https://patreon.com/dragoscirjan)
