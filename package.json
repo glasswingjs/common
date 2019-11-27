@@ -1,8 +1,8 @@
 {
-  "name": "template-ts",
-  "version": "1.0.0",
-  "description": "Template for TypeScript Projects",
-  "main": "dist/index.js",
+  "name": "@glasswing/common",
+  "version": "0.0.1",
+  "description": "GlassWingJs Common Package",
+  "main": "dist/commonjs/index.js",
   "scripts": {
     "build": "rollup -c --environment NODE_ENV:production",
     "build:dts": "dts-bundle-generator ./src/index.ts -o dist/index.d.ts",
@@ -24,14 +24,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dragoscirjan/template-ts.git"
+    "url": "git+https://github.com/glasswingjs/common.git"
   },
   "author": "Dragos Cirjan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dragoscirjan/template-ts/issues"
+    "url": "https://github.com/glasswingjs/common/issues"
   },
-  "homepage": "https://github.com/dragoscirjan/template-ts#readme",
+  "homepage": "https://github.com/glasswingjs/common#readme",
   "devDependencies": {
     "@types/chai": "^4.2.3",
     "@types/finalhandler": "^1.1.0",
