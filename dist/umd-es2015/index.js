@@ -4,6 +4,16 @@
   (global = global || self, factory((global.gw = global.gw || {}, global.gw.common = {}), global.tsyringe));
 }(this, (function (exports, tsyringe) { 'use strict';
 
+  /**
+   * Extends a class's method, by wrapping it with another method
+   *
+   * @param descriptor
+   * @param handler
+   */
+  const extendPropertyDescriptor = (descriptor, handler) => Object.assign(descriptor, {
+      value: handler(descriptor.value),
+  });
+
   const Inject = (token) => tsyringe.inject(token);
   const Injectable = () => tsyringe.injectable();
   const Singleton = () => tsyringe.singleton();
@@ -12,6 +22,7 @@
   exports.Inject = Inject;
   exports.Injectable = Injectable;
   exports.Singleton = Singleton;
+  exports.extendPropertyDescriptor = extendPropertyDescriptor;
   exports.resolve = resolve;
 
   Object.defineProperty(exports, '__esModule', { value: true });
