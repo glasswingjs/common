@@ -9,8 +9,7 @@
     "interface-name" : [false, "never"],
     "quotemark": [true, "single"],
     "semicolon": [true, "never"],
-    "max-classes-per-file": [false, "always"],
-    "interface-over-type-literal": false
+    "max-classes-per-file": [false, "always"]
   },
   "rulesDirectory": []
 }
