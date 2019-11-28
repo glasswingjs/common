@@ -4,6 +4,8 @@ const isProduction = process.env.NODE_ENV === "production";
 
 const entryName = "index";
 
+const name = 'gw.common'
+
 
 const ts = (target = 'es2015') => typescript({
   cacheRoot: ".rollupcache",
@@ -30,7 +32,7 @@ export default [{
     {
       file: `dist/umd-es2015/${entryName}.js`,
       format: "umd",
-      name: "gw.http",
+      name: name,
     },
   ],
   plugins: [ ts(), ],
@@ -54,7 +56,7 @@ export default [{
         { file: `dist/native-modules/${entryName}.js`, format: "es" },
         { file: `dist/umd/${entryName}.js`,
           format: "umd",
-          name: "gw.http",
+          name: name,
         },
         { file: `dist/system/${entryName}.js`, format: "system" },
       ],

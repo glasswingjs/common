@@ -1,7 +1,7 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('tsyringe')) :
 	typeof define === 'function' && define.amd ? define(['exports', 'tsyringe'], factory) :
-	(global = global || self, factory((global.gw = global.gw || {}, global.gw.http = {}), global.tsyringe));
+	(global = global || self, factory((global.gw = global.gw || {}, global.gw.common = {}), global.tsyringe));
 }(this, (function (exports, tsyringe) { 'use strict';
 
 	const resolve = (token) => tsyringe.container.resolve(token);
