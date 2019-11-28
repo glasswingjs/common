@@ -1,6 +1,8 @@
-import { container } from 'tsyringe';
-export { inject as Inject, injectable as Injectable, singleton as Singleton } from 'tsyringe';
+import { inject, injectable, singleton, container } from 'tsyringe';
 
+var Inject = function (token) { return inject(token); };
+var Injectable = function () { return injectable(); };
+var Singleton = function () { return singleton(); };
 var resolve = function (token) { return container.resolve(token); };
 
-export { resolve };
+export { Inject, Injectable, Singleton, resolve };
