@@ -13,6 +13,15 @@
   const extendPropertyDescriptor = (descriptor, handler) => Object.assign(descriptor, {
       value: handler(descriptor.value),
   });
+  /**
+   * Wraps a decorator's PropertyDescriptor param by extending the descriptor.value with a wrapper
+   *
+   * @param descriptor
+   * @param handler
+   */
+  const wrapPropertyDescriptorHandler = (descriptor, handler) => Object.assign(descriptor, {
+      value: handler(descriptor.value),
+  });
 
   const Inject = (token) => tsyringe.inject(token);
   const Injectable = () => tsyringe.injectable();
@@ -24,6 +33,7 @@
   exports.Singleton = Singleton;
   exports.extendPropertyDescriptor = extendPropertyDescriptor;
   exports.resolve = resolve;
+  exports.wrapPropertyDescriptorHandler = wrapPropertyDescriptorHandler;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 

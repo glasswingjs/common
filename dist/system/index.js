@@ -21,6 +21,17 @@ System.register(['tsyringe'], function (exports) {
               value: handler(descriptor.value),
           });
       });
+      /**
+       * Wraps a decorator's PropertyDescriptor param by extending the descriptor.value with a wrapper
+       *
+       * @param descriptor
+       * @param handler
+       */
+      var wrapPropertyDescriptorHandler = exports('wrapPropertyDescriptorHandler', function (descriptor, handler) {
+          return Object.assign(descriptor, {
+              value: handler(descriptor.value),
+          });
+      });
 
       var Inject = exports('Inject', function (token) { return inject(token); });
       var Injectable = exports('Injectable', function () { return injectable(); });

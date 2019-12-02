@@ -14,3 +14,19 @@ export const extendPropertyDescriptor = (descriptor: PropertyDescriptor, handler
   Object.assign(descriptor, {
     value: handler(descriptor.value),
   })
+
+export type ControllerAction = (...args: any[]) => any
+
+/**
+ * Wraps a decorator's PropertyDescriptor param by extending the descriptor.value with a wrapper
+ *
+ * @param descriptor
+ * @param handler
+ */
+export const wrapPropertyDescriptorHandler = (
+  descriptor: PropertyDescriptor,
+  handler: (oldMethod: ControllerAction) => any,
+): PropertyDescriptor =>
+  Object.assign(descriptor, {
+    value: handler(descriptor.value),
+  })
