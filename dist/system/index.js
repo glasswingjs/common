@@ -16,20 +16,7 @@ System.register(['tsyringe'], function (exports) {
        * @param descriptor
        * @param handler
        */
-      var extendPropertyDescriptor = exports('extendPropertyDescriptor', function (descriptor, handler) {
-          return Object.assign(descriptor, {
-              value: handler(descriptor.value),
-          });
-      });
-      /**
-       * Wraps a decorator's PropertyDescriptor param by extending the descriptor.value with a wrapper
-       * @TODO: Method should be replaced with `extendPropertyDescriptor`
-       * @deprecated
-       *
-       * @param descriptor
-       * @param handler
-       */
-      var wrapPropertyDescriptorHandler = exports('wrapPropertyDescriptorHandler', function (descriptor, handler) {
+      var extendClassMethod = exports('extendClassMethod', function (descriptor, handler) {
           return Object.assign(descriptor, {
               value: handler(descriptor.value),
           });

@@ -10,18 +10,7 @@
    * @param descriptor
    * @param handler
    */
-  const extendPropertyDescriptor = (descriptor, handler) => Object.assign(descriptor, {
-      value: handler(descriptor.value),
-  });
-  /**
-   * Wraps a decorator's PropertyDescriptor param by extending the descriptor.value with a wrapper
-   * @TODO: Method should be replaced with `extendPropertyDescriptor`
-   * @deprecated
-   *
-   * @param descriptor
-   * @param handler
-   */
-  const wrapPropertyDescriptorHandler = (descriptor, handler) => Object.assign(descriptor, {
+  const extendClassMethod = (descriptor, handler) => Object.assign(descriptor, {
       value: handler(descriptor.value),
   });
 
@@ -33,9 +22,8 @@
   exports.Inject = Inject;
   exports.Injectable = Injectable;
   exports.Singleton = Singleton;
-  exports.extendPropertyDescriptor = extendPropertyDescriptor;
+  exports.extendClassMethod = extendClassMethod;
   exports.resolve = resolve;
-  exports.wrapPropertyDescriptorHandler = wrapPropertyDescriptorHandler;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 

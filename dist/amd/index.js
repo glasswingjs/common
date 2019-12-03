@@ -6,20 +6,7 @@ define('index', ['exports', 'tsyringe'], function (exports, tsyringe) { 'use str
    * @param descriptor
    * @param handler
    */
-  var extendPropertyDescriptor = function (descriptor, handler) {
-      return Object.assign(descriptor, {
-          value: handler(descriptor.value),
-      });
-  };
-  /**
-   * Wraps a decorator's PropertyDescriptor param by extending the descriptor.value with a wrapper
-   * @TODO: Method should be replaced with `extendPropertyDescriptor`
-   * @deprecated
-   *
-   * @param descriptor
-   * @param handler
-   */
-  var wrapPropertyDescriptorHandler = function (descriptor, handler) {
+  var extendClassMethod = function (descriptor, handler) {
       return Object.assign(descriptor, {
           value: handler(descriptor.value),
       });
@@ -33,9 +20,8 @@ define('index', ['exports', 'tsyringe'], function (exports, tsyringe) { 'use str
   exports.Inject = Inject;
   exports.Injectable = Injectable;
   exports.Singleton = Singleton;
-  exports.extendPropertyDescriptor = extendPropertyDescriptor;
+  exports.extendClassMethod = extendClassMethod;
   exports.resolve = resolve;
-  exports.wrapPropertyDescriptorHandler = wrapPropertyDescriptorHandler;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 

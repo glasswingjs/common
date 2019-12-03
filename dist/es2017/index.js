@@ -6,18 +6,7 @@ import { inject, injectable, singleton, container } from 'tsyringe';
  * @param descriptor
  * @param handler
  */
-const extendPropertyDescriptor = (descriptor, handler) => Object.assign(descriptor, {
-    value: handler(descriptor.value),
-});
-/**
- * Wraps a decorator's PropertyDescriptor param by extending the descriptor.value with a wrapper
- * @TODO: Method should be replaced with `extendPropertyDescriptor`
- * @deprecated
- *
- * @param descriptor
- * @param handler
- */
-const wrapPropertyDescriptorHandler = (descriptor, handler) => Object.assign(descriptor, {
+const extendClassMethod = (descriptor, handler) => Object.assign(descriptor, {
     value: handler(descriptor.value),
 });
 
@@ -26,4 +15,4 @@ const Injectable = () => injectable();
 const Singleton = () => singleton();
 const resolve = (token) => container.resolve(token);
 
-export { Inject, Injectable, Singleton, extendPropertyDescriptor, resolve, wrapPropertyDescriptorHandler };
+export { Inject, Injectable, Singleton, extendClassMethod, resolve };
