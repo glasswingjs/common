@@ -14,10 +14,10 @@
       value: handler(descriptor.value),
   });
 
-  const Inject = (token) => tsyringe.inject(token);
-  const Injectable = () => tsyringe.injectable();
-  const Singleton = () => tsyringe.singleton();
+  const Inject = tsyringe.inject;
+  const Injectable = tsyringe.injectable;
   const resolve = (token) => tsyringe.container.resolve(token);
+  const Singleton = tsyringe.singleton;
 
   exports.Inject = Inject;
   exports.Injectable = Injectable;

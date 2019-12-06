@@ -12,10 +12,10 @@ define('index', ['exports', 'tsyringe'], function (exports, tsyringe) { 'use str
       });
   };
 
-  var Inject = function (token) { return tsyringe.inject(token); };
-  var Injectable = function () { return tsyringe.injectable(); };
-  var Singleton = function () { return tsyringe.singleton(); };
+  var Inject = tsyringe.inject;
+  var Injectable = tsyringe.injectable;
   var resolve = function (token) { return tsyringe.container.resolve(token); };
+  var Singleton = tsyringe.singleton;
 
   exports.Inject = Inject;
   exports.Injectable = Injectable;

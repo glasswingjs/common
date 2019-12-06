@@ -1,12 +1,12 @@
 System.register(['tsyringe'], function (exports) {
   'use strict';
-  var inject, injectable, singleton, container;
+  var inject, injectable, container, singleton;
   return {
     setters: [function (module) {
       inject = module.inject;
       injectable = module.injectable;
-      singleton = module.singleton;
       container = module.container;
+      singleton = module.singleton;
     }],
     execute: function () {
 
@@ -22,10 +22,10 @@ System.register(['tsyringe'], function (exports) {
           });
       });
 
-      var Inject = exports('Inject', function (token) { return inject(token); });
-      var Injectable = exports('Injectable', function () { return injectable(); });
-      var Singleton = exports('Singleton', function () { return singleton(); });
+      var Inject = exports('Inject', inject);
+      var Injectable = exports('Injectable', injectable);
       var resolve = exports('resolve', function (token) { return container.resolve(token); });
+      var Singleton = exports('Singleton', singleton);
 
     }
   };

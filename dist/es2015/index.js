@@ -1,4 +1,4 @@
-import { inject, injectable, singleton, container } from 'tsyringe';
+import { inject, injectable, container, singleton } from 'tsyringe';
 
 /**
  * Extends a class's method, by wrapping it with another method
@@ -10,9 +10,9 @@ const extendClassMethod = (descriptor, handler) => Object.assign(descriptor, {
     value: handler(descriptor.value),
 });
 
-const Inject = (token) => inject(token);
-const Injectable = () => injectable();
-const Singleton = () => singleton();
+const Inject = inject;
+const Injectable = injectable;
 const resolve = (token) => container.resolve(token);
+const Singleton = singleton;
 
 export { Inject, Injectable, Singleton, extendClassMethod, resolve };
