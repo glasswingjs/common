@@ -1,6 +1,5 @@
 import { InjectionToken, inject, injectable, singleton } from 'tsyringe';
 
-export declare type ClassConstructor = new (...args: any[]) => {};
 export declare type ClassMethod = (...args: any[]) => any;
 export declare type ClassMethodWrapper = (oldMethod: ClassMethod) => ClassMethod;
 /**
