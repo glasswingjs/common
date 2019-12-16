@@ -1,8 +1,8 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('tsyringe')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'tsyringe'], factory) :
-  (global = global || self, factory((global.gw = global.gw || {}, global.gw.common = {}), global.tsyringe));
-}(this, (function (exports, tsyringe) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+  typeof define === 'function' && define.amd ? define(['exports'], factory) :
+  (global = global || self, factory((global.gw = global.gw || {}, global.gw.common = {})));
+}(this, (function (exports) { 'use strict';
 
   /**
    * Extends a class's method, by wrapping it with another method
@@ -16,16 +16,7 @@
       });
   };
 
-  var Inject = tsyringe.inject;
-  var Injectable = tsyringe.injectable;
-  var resolve = function (token) { return tsyringe.container.resolve(token); };
-  var Singleton = tsyringe.singleton;
-
-  exports.Inject = Inject;
-  exports.Injectable = Injectable;
-  exports.Singleton = Singleton;
   exports.extendClassMethod = extendClassMethod;
-  exports.resolve = resolve;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 

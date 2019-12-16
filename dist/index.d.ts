@@ -1,5 +1,3 @@
-import { InjectionToken, inject, injectable, singleton } from 'tsyringe';
-
 export declare type ClassMethod = (...args: any[]) => any;
 export declare type ClassMethodWrapper = (oldMethod: ClassMethod) => ClassMethod;
 /**
@@ -9,9 +7,5 @@ export declare type ClassMethodWrapper = (oldMethod: ClassMethod) => ClassMethod
  * @param handler
  */
 export declare const extendClassMethod: (descriptor: PropertyDescriptor, handler: ClassMethodWrapper) => PropertyDescriptor;
-export declare const Inject: typeof inject;
-export declare const Injectable: typeof injectable;
-export declare const resolve: <T>(token: InjectionToken<T>) => T;
-export declare const Singleton: typeof singleton;
 
 export {};

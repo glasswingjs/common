@@ -1,5 +1,3 @@
-import { inject, injectable, container, singleton } from 'tsyringe';
-
 /**
  * Extends a class's method, by wrapping it with another method
  *
@@ -12,9 +10,4 @@ var extendClassMethod = function (descriptor, handler) {
     });
 };
 
-var Inject = inject;
-var Injectable = injectable;
-var resolve = function (token) { return container.resolve(token); };
-var Singleton = singleton;
-
-export { Inject, Injectable, Singleton, extendClassMethod, resolve };
+export { extendClassMethod };
