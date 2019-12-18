@@ -1,4 +1,4 @@
-# glasswing
+# @glasswing/common
 
 <!-- [![Npm Version](https://img.shields.io/npm/v/frameworks.svg)](https://www.npmjs.com/package/frameworks) -->
 [![HitCount](http://hits.dwyl.io/glasswingjs/common.svg)](http://hits.dwyl.io/glasswingjs/common)
